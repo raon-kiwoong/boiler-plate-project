@@ -17,16 +17,21 @@ export default defineConfig((configEnv) => {
     },
     resolve: {
       alias: {
-        app: resolve(__dirname, "src", "app"),
-        components: resolve(__dirname, "src", "components"),
-        hooks: resolve(__dirname, "src", "hooks"),
+        "@app": resolve(__dirname, "src", "app"),
+        "@components": resolve(__dirname, "src", "components"),
+        "@hooks": resolve(__dirname, "src", "hooks"),
+        "@assets": resolve(__dirname, "src", "assets"),
+        "@atoms": resolve(__dirname, "src", "atoms"),
+        "@@types": resolve(__dirname, "src", "types"),
+        "@utils": resolve(__dirname, "src", "utils"),
+        "@screens": resolve(__dirname, "src", "screens"),
+        "@layouts": resolve(__dirname, "src", "layouts"),
+        "@providers": resolve(__dirname, "src", "providers"),
       },
     },
     css: {
       modules: {
-        generateScopedName: isDevelopment
-          ? "[name]__[local]__[hash:base64:5]"
-          : "[hash:base64:5]",
+        generateScopedName: isDevelopment ? "[name]__[local]__[hash:base64:5]" : "[hash:base64:5]",
       },
     },
   };

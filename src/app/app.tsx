@@ -1,5 +1,5 @@
-import Logos from "components/atoms/logos";
-import Card from "components/organisms/card";
+import Logos from "@components/atoms/logos";
+import Card from "@components/organisms/card";
 import {
   BeakerIcon,
   BookmarkIcon,
@@ -13,14 +13,13 @@ import {
   PhotoIcon,
 } from "@heroicons/react/24/outline";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
-import Button from "components/atoms/button";
-import CopyButton from "components/molecules/copy-button";
+import Button from "@components/atoms/button";
+import CopyButton from "@components/molecules/copy-button";
 
 const features = [
   {
     name: "Vite",
-    description:
-      "Faster and leaner development experience for modern web projects.",
+    description: "Faster and leaner development experience for modern web projects.",
     logo: CubeTransparentIcon,
     docs: "https://vitejs.dev/",
   },
@@ -32,8 +31,7 @@ const features = [
   },
   {
     name: "TypeScript",
-    description:
-      "Strongly typed programming language that builds on JavaScript.",
+    description: "Strongly typed programming language that builds on JavaScript.",
     logo: BookmarkIcon,
     docs: "https://www.typescriptlang.org/",
   },
@@ -63,8 +61,7 @@ const features = [
   },
   {
     name: "Husky",
-    description:
-      "Lint your commit messages, run tests, lint code, etc... when you commit or push.",
+    description: "Lint your commit messages, run tests, lint code, etc... when you commit or push.",
     logo: CakeIcon,
     docs: "https://github.com/typicode/husky",
   },
@@ -76,15 +73,13 @@ const features = [
   },
   {
     name: "Atomic design",
-    description:
-      "We’re not designing pages, we’re designing systems of components.",
+    description: "We’re not designing pages, we’re designing systems of components.",
     logo: PhoneXMarkIcon,
     docs: "https://bradfrost.com/blog/post/atomic-web-design/",
   },
   {
     name: "Absolute imports",
-    description:
-      "Import resource using its full path from the project’s src folder.",
+    description: "Import resource using its full path from the project’s src folder.",
     logo: ChevronDownIcon,
     docs: "https://github.com/vitejs/vite/issues/88#issuecomment-762415200",
   },
@@ -97,22 +92,13 @@ function App() {
         <h3 className="text-2xl sm:text-4xl leading-none font-bold tracking-tight text-purple-200">
           <span className="text-[gold] opacity-75">Vital</span> @ Vite Template
         </h3>
-        <h1 className="text-6xl lg:text-7xl leading-none font-extrabold tracking-tight mb-8 sm:mb-10 text-purple-400">
-          React + TypeScript + Tailwind
-        </h1>
+        <h1 className="text-6xl lg:text-7xl leading-none font-extrabold tracking-tight mb-8 sm:mb-10 text-purple-400">React + TypeScript + Tailwind</h1>
         <p className="max-w-screen-lg text-lg sm:text-xl  text-gray-300 font-medium mb-10 sm:mb-11">
-          Bootstrap your web projects faster than ever. Comes with:{" "}
-          <code className="font-mono text-blue-500 font-bold">CSS-Modules</code>
-          , <code className="font-mono text-blue-500 font-bold">Jest</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Husky</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Commit-lint</code>
-          , <code className="font-mono text-blue-500 font-bold">ESLint</code>,{" "}
-          <code className="font-mono text-blue-500 font-bold">Prettier</code>{" "}
-          and{" "}
-          <code className="font-mono text-blue-500 font-bold">
-            Atomic organization for components
-          </code>
-          . Configured and ready to go.
+          Bootstrap your web projects faster than ever. Comes with: <code className="font-mono text-blue-500 font-bold">CSS-Modules</code>,{" "}
+          <code className="font-mono text-blue-500 font-bold">Jest</code>, <code className="font-mono text-blue-500 font-bold">Husky</code>,{" "}
+          <code className="font-mono text-blue-500 font-bold">Commit-lint</code>, <code className="font-mono text-blue-500 font-bold">ESLint</code>,{" "}
+          <code className="font-mono text-blue-500 font-bold">Prettier</code> and{" "}
+          <code className="font-mono text-blue-500 font-bold">Atomic organization for components</code>. Configured and ready to go.
         </p>
         <div className="absolute top-12 right-12 opacity-10 lg:opacity-50">
           <Logos.Vite className="w-56 h-56" />
@@ -129,19 +115,12 @@ function App() {
       <section className="max-w-screen-lg xl:max-w-screen-xl mx-auto grid grid-cols-10 gap-4">
         {features.map((props, index) => (
           <div key={index} className="col-span-10 sm:col-span-5">
-            <Card
-              title={props.name}
-              description={props.description}
-              Icon={props.logo}
-              href={props.docs}
-            />
+            <Card title={props.name} description={props.description} Icon={props.logo} href={props.docs} />
           </div>
         ))}
       </section>
       <footer className="pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto text-center sm:text-right text-gray-400 font-bold">
-        <a href="https://github.com/jvidalv">
-          Josep Vidal @ {new Date().getFullYear()}
-        </a>
+        <a href="https://github.com/jvidalv">Josep Vidal @ {new Date().getFullYear()}</a>
       </footer>
     </main>
   );

@@ -102,3 +102,32 @@ By default this command should be triggered after yarn/npm deps are installed.
 I have created several React apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
 
 So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. Feel free to tweak it or even maintains your own forks.
+
+## 목차
+
+### 사용 라이브러리
+
+1. 상태관리: recoil, recoil-persist
+2. api 호출: @tanstack/use-query, axios, qs, use-hooks(debounce)
+3. cookie 관리: universal-cookie
+4. aws 및 이미지 업로드 관련: aws presigned post, aws-sdk
+5. 스타일 관리: styled-components, tailwindcss
+6. 애니메이션: framer-motion
+
+### 디렉토리 구조
+
+```
+┌── src
+│   ├── assets
+│   ├── atoms
+│   ├── components
+│   ├── hooks
+│   ├── utils
+│   ├── types
+│   ├── screens
+│   ├── layouts
+│   └── providers
+├── index.html
+├── .env
+└── tsconfig.json
+```
